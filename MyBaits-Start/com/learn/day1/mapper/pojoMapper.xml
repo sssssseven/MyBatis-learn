@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learn.day1.mapper.PojoMapper">
+	<select id="selectPojo" parameterType="long" resultType="com.learn.day1.pojo.Pojo">
+		select id, role_name as name,note from t_role where id = #{id}
+	</select>
+</mapper>

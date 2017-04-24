@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.PojoMapper">
+	<resultMap type="pojo.PojoDAO" id="pojoMap">
+		<id column="id" javaType="long" jdbcType="BIGINT" />
+		<result column="roleName" property="roleName" javaType="string" jdbcType="VARCHAR" />
+		<result column="note" property="note" typeHandler="typehandler.MyStringTypeHandler2" />
+		<result column="sex" property="sex" typeHandler="org.apache.ibatis.type.EnumTypeHandler" />
+	</resultMap>
+	
+	<select id="selectPojo" parameterType="long" resultMap="pojoMap">
+		select id,role_name as roleName,note,sex from t_role where id=#{id}
+	</select>
+</mapper>
