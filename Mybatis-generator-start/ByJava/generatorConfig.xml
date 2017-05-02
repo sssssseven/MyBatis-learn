@@ -12,7 +12,7 @@
 		<plugin type="org.mybatis.generator.plugins.MapperConfigPlugin"></plugin>
 		
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/mybatis" userId="root" password="imseven">
+			connectionURL="jdbc:mysql://localhost:3306/mybatis" userId="root" password="123456">
 		</jdbcConnection>
 
 		<javaTypeResolver>

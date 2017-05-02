@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE generatorConfiguration   PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="eshop" targetRuntime="MyBatis3">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin"></plugin>
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="false" />
+		</commentGenerator> 
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/eshop" userId="root" password="imseven">
+		</jdbcConnection>
+		<javaModelGenerator targetPackage="cn.edu.tju.tiei.eshop.mybatis.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator> 
+		<sqlMapGenerator targetPackage="cn.edu.tju.tiei.eshop.mybatis.mapping"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="cn.edu.tju.tiei.eshop.mybatis.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>         <!-- database tables -->
+		<table tableName="category">
+		</table>
+		<table tableName="customer">
+		</table>
+		<table tableName="item">
+		</table>
+		<table tableName="login">
+		</table>
+		<table tableName="order">
+		</table>
+		<table tableName="order_status">
+		</table>
+		<table tableName="payment_method">
+		</table>
+		<table tableName="product">
+		</table>
+		<table tableName="rank">
+		</table>
+		<table tableName="send_method">
+		</table>
+		<table tableName="user_roles">
+		</table>
+	</context>
+</generatorConfiguration> 
